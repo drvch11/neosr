@@ -8,41 +8,20 @@
 ## installation
 
 > [!IMPORTANT]
-> Requires Python 3.11 and CUDA =>11.8.
-
-Install latest [Pytorch (=>2.1) and TorchVision](https://pytorch.org/get-started/locally/) (required).
-
-Clone the repository:
+> Requires python 3.11, latest pytorch >= 2.1 (cuda >= 11.8) and torchvision.
 
 ```
-git clone https://github.com/muslll/neosr
+git clone https://github.com/drvch11/neosr
 cd neosr
-```
-
-Then install other dependencies via `pip`:
-
-```
+python -m venv venv
+source venv/bin/activate
 pip install -e .
 ```
-
-Alternatively, use [**`poetry`**](https://python-poetry.org/docs/#installation) (*recommended on linux*):
-
-```
-poetry install
-poetry add torch@latest torchvision@latest
-```
-Note: You must use `poetry shell` to enter the env after installation.
 
 ***(optional)*** If you want to convert your models ([convert.py](convert.py)), you need the following dependencies:
 
 ```
 pip install onnx onnxruntime-gpu onnxconverter-common onnxsim
-```
-
-You can also install using poetry (*recommended on linux*):
-
-```
-poetry add onnx onnxruntime-gpu onnxconverter-common onnxsim
 ```
 
 > [!TIP]
