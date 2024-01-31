@@ -1,5 +1,5 @@
 
-name: x4_projectname
+name: RealESRGAN
 model_type: default
 scale: 4
 num_gpu: 1
@@ -14,7 +14,7 @@ datasets:
     # ground truth, high resolution images
     dataroot_gt: "dataset/gt/"
     # low quality/resolution images
-    dataroot_lq: "dataset/lq/" 
+    dataroot_lq: "dataset/lq/"
     #meta_info: "datasets/nomos_uni/meta_info.txt"
     io_backend:
       type: disk
@@ -45,8 +45,8 @@ datasets:
 #      type: calculate_ssim
 
 path:
-  pretrain_network_g: "experiments/pretrain/RealESRGAN_g.pth"
-  #pretrain_network_d: "experiments/pretrain/RealESRGAN_d.pth" # causes an error, don't use.
+  pretrain_network_g: "experiments/pretrain/RealESRGAN.pth"
+  #pretrain_network_d: # causes an error, don't use.
   resume_state: ~
   #strict_load_g: false # do not uncomment, read docs
 
